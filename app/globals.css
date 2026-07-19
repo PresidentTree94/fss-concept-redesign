@@ -17,6 +17,10 @@ body {
   font-family: var(--font-body);
 }
 
+section:not(:first-of-type) > div {
+  @apply max-w-6xl mx-auto px-10 text-center;
+}
+
 h1, h2, h3 {
   font-family: var(--font-display);
   font-weight: 700;
