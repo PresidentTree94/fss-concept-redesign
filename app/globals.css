@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary-dark: oklch(.6 .16 135);
-  --color-primary-light: oklch(.83 .12 135);
+  --color-primary-dark: oklch(0.6 0.16 135);
+  --color-primary-light: oklch(0.83 0.12 135);
   --color-secondary: oklch(0.95 0.014 150);
   --color-background-light: oklch(1 0.003 100);
   --color-background-dark: oklch(0.99 0.005 100);
@@ -17,7 +17,7 @@ body {
   font-family: var(--font-body);
 }
 
-section:not(:first-of-type) > div {
+section:not(:first-of-type, :last-of-type) > div {
   @apply max-w-6xl mx-auto px-10 text-center;
 }
 

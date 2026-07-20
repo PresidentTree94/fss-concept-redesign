@@ -25,6 +25,13 @@ const modules = [
   { heading: "Culture of Food Safety", icon: "ri-heart-pulse-line", text: "Building a workplace where safe food practices are second nature, not a checkbox exercise." }
 ];
 
+const stats = [
+  { number: "6", text: "month program" },
+  { number: "$0", text: "cost to employer" },
+  { number: "100%", text: "on-the-job training" },
+  { number: "99%", text: "employer approval" }
+];
+
 export default function Home() {
   return (
     <main>
@@ -127,8 +134,38 @@ export default function Home() {
           />
         </div>
       </section>
-      <section>Careers</section>
-      <section>Contact</section>
+      <section className="bg-background-light py-16 md:py-20">
+        <div>
+          <span className="tiny text-primary-dark font-semibold">Careers</span>
+          <h2 className="text-3xl md:text-4xl text-foreground-dark max-w-2xl mx-auto">Build your team at zero cost.</h2>
+          <p className="mt-3 mb-10 text-foreground-light max-w-xl mx-auto">Our Incumbent Worker Apprenticeship turns your existing employees into certified food safety specialists — fully funded, zero downtime, nationally recognized credentials.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            {stats.map((s, index) => (
+              <div key={index} className="bg-[oklch(0.98_0.02_135)] border border-primary-light/40 p-5 rounded-lg">
+                <h3 className="text-3xl md:text-4xl text-primary-dark">{s.number}</h3>
+                <p className="text-xs text-foreground-light mt-1.5">{s.text}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
+            <Link href="/careers" className="bg-primary-dark text-background-light px-5 py-2.5 rounded-md text-sm font-semibold inline-flex items-center gap-2">View Careers<i className="ri-arrow-right-line"></i></Link>
+            <p className="text-sm text-foreground-light">Apprenticeships, on-site training & open roles</p>
+          </div>
+        </div>
+      </section>
+      <section className="relative">
+        <Image src="/contact.jpg" alt="Fruit" fill sizes="100%" className="object-cover object-top" />
+        <div className="absolute inset-0 bg-[oklch(0.32_0.09_135)]/85"></div>
+        <div className="relative p-16 max-w-6xl mx-auto px-10 text-center">
+          <h2 className="text-3xl md:text-4xl text-background-light">Ready to make your next inspection a non-event?</h2>
+          <p className="text-background-dark/80 mt-2 mb-6">Book a 20-minute call with our audit team. No fluff — just a real plan for your facility.</p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 font-semibold">
+            <Link href="/contact" className="bg-primary-dark text-background-light px-7 py-3.5 rounded-md flex items-center gap-2"><i className="ri-calendar-check-line"></i>Book a Demo</Link>
+            <a href="" className="bg-background-light text-foreground-dark px-7 py-3.5 rounded-md flex items-center gap-2
+            "><i className="ri-download-line"></i>Download FSMA PDF</a>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
