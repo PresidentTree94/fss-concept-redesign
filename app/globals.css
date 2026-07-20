@@ -3,6 +3,7 @@
 @theme inline {
   --color-primary-dark: oklch(0.6 0.16 135);
   --color-primary-light: oklch(0.83 0.12 135);
+  --color-primary-hover: oklch(0.5 0.14 135);
   --color-secondary: oklch(0.95 0.014 150);
   --color-background-light: oklch(1 0.003 100);
   --color-background-dark: oklch(0.99 0.005 100);
@@ -33,5 +34,9 @@ p {
 @layer components {
   .tiny {
     @apply text-xs uppercase tracking-widest inline-block mb-2;
+  }
+
+  .btn {
+    @apply bg-primary-dark hover:bg-primary-hover text-background-light px-5 py-2.5 rounded-md text-sm font-semibold inline-flex items-center gap-2 transition-colors;
   }
 }

@@ -46,8 +46,8 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-background-light my-6">Food Safety and Compliance<span className="text-primary-light inline-block">at Your Fingertips</span></h1>
           <p className="md:text-lg max-w-2xl mx-auto text-background-dark">Simpler audit prep, self-directed employee training, and automated document control — purpose-built for the food, dietary supplement, agriculture and seafood industries.</p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 font-semibold">
-            <button className="bg-primary-dark px-7 py-3.5 rounded-md text-background-light flex items-center gap-2"><i className="ri-shield-check-line"></i>Start Your Audit Prep</button>
-            <button className="bg-background-light/95 px-7 py-3.5 rounded-md text-foreground-dark flex items-center gap-2">Explore Our Services<i className="ri-arrow-right-line"></i></button>
+            <Link href="/contact" className="bg-primary-dark hover:bg-primary-hover px-7 py-3.5 rounded-md text-background-light flex items-center gap-2 transition-colors"><i className="ri-shield-check-line"></i>Start Your Audit Prep</Link>
+            <Link href="/services" className="bg-background-light/95 hover:bg-background-light px-7 py-3.5 rounded-md text-foreground-dark flex items-center gap-2">Explore Our Services<i className="ri-arrow-right-line"></i></Link>
           </div>
         </div>
       </section>
@@ -62,7 +62,7 @@ export default function Home() {
                 <span key={index} className="flex items-center gap-1.5 text-sm text-foreground-light"><i className="ri-checkbox-circle-line text-primary-dark"></i>{a}</span>
               ))}
             </div>
-            <Link href="/about" className="bg-primary-dark text-background-light px-5 py-2.5 rounded-md text-sm font-semibold inline-flex items-center gap-2 mt-7">Learn more about us<i className="ri-arrow-right-line"></i></Link>
+            <Link href="/about" className="btn mt-7">Learn more about us<i className="ri-arrow-right-line"></i></Link>
           </div>
           <Images
             root="about"
@@ -77,7 +77,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl text-foreground-dark max-w-2xl mx-auto">One platform for every compliance moment.</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10 mb-8 text-left">
             {services.map((s, index) => (
-              <div key={index} className="bg-background-light border border-border p-6 rounded-lg">
+              <div key={index} className="bg-background-light border border-border hover:border-primary-light p-6 rounded-lg transition-colors">
                 <div className="w-10 h-10 bg-[oklch(0.95_0.045_135)] rounded-md flex items-center justify-center">
                   <i className={`${s.icon} text-[oklch(0.5_0.14_135)] text-xl`}></i>
                 </div>
@@ -86,7 +86,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <Link href="/services" className="bg-primary-dark text-background-light px-5 py-2.5 rounded-md text-sm font-semibold inline-flex items-center gap-2">Explore all services<i className="ri-arrow-right-line"></i></Link>
+          <Link href="/services" className="btn">Explore all services<i className="ri-arrow-right-line"></i></Link>
         </div>
       </section>
       <section className="bg-background-light py-16 md:py-20">
@@ -95,14 +95,14 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl text-foreground-dark max-w-2xl mx-auto">SMART isn't just our name — it's how we work.</h2>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-3 max-w-fit mx-auto md:max-w-auto md:mx-0 my-10">
             {smart.map((s, index) => (
-              <div key={index} className="bg-background-dark p-5 border border-border rounded-md">
+              <div key={index} className="bg-background-dark p-5 border border-border hover:border-primary-light rounded-md transition-colors">
                 <span className="w-12 h-12 bg-primary-dark rounded-md inline-flex items-center justify-center font-display text-2xl font-bold text-background-light">{s.heading[0]}</span>
                 <h3 className="text-sm text-foreground-dark mt-3 mb-1.5">{s.heading}</h3>
                 <p className="text-xs text-foreground-light">{s.text}</p>
               </div>
             ))}
           </div>
-          <Link href="/about" className="border-2 border-primary-dark text-primary-dark px-5 py-2.5 rounded-md text-sm font-semibold inline-flex items-center gap-2">See the full SMART methodology<i className="ri-arrow-right-line"></i></Link>
+          <Link href="/about" className="border-2 border-primary-dark hover:bg-primary-dark hover:text-background-light text-primary-dark px-5 py-2.5 rounded-md text-sm font-semibold inline-flex items-center gap-2 transition-colors">See the full SMART methodology<i className="ri-arrow-right-line"></i></Link>
         </div>
       </section>
       <section className="bg-background-dark py-16 md:py-20">
@@ -113,7 +113,7 @@ export default function Home() {
             <p className="mt-4 mb-7 max-w-xl text-foreground-light mx-auto lg:mx-0">Four comprehensive modules built by real auditors. Earn certified badges with one-year expiration — proof your team is audit-ready, from any device.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {modules.map((m, index) => (
-                <div key={index} className="bg-background-light p-4 rounded-md border border-border text-left">
+                <div key={index} className="bg-background-light p-4 rounded-md border border-border hover:border-primary-light text-left transition-colors">
                   <div className="w-8 h-8 bg-[oklch(0.95_0.045_135)] rounded-md flex items-center justify-center">
                     <i className={`${m.icon} text-[oklch(0.5_0.14_135)] text-sm`}></i>
                   </div>
@@ -123,7 +123,7 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-7 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
-              <Link href="/e-learning" className="bg-primary-dark text-background-light px-5 py-2.5 rounded-md text-sm font-semibold inline-flex items-center gap-2">Explore E-Learning<i className="ri-arrow-right-line"></i></Link>
+              <Link href="/e-learning" className="btn">Explore E-Learning<i className="ri-arrow-right-line"></i></Link>
               <span className="text-sm text-foreground-light">Starting at $25 per module</span>
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function Home() {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
-            <Link href="/careers" className="bg-primary-dark text-background-light px-5 py-2.5 rounded-md text-sm font-semibold inline-flex items-center gap-2">View Careers<i className="ri-arrow-right-line"></i></Link>
+            <Link href="/careers" className="btn">View Careers<i className="ri-arrow-right-line"></i></Link>
             <p className="text-sm text-foreground-light">Apprenticeships, on-site training & open roles</p>
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl text-background-light">Ready to make your next inspection a non-event?</h2>
           <p className="text-background-dark/80 mt-2 mb-6">Book a 20-minute call with our audit team. No fluff — just a real plan for your facility.</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 font-semibold">
-            <Link href="/contact" className="bg-primary-dark text-background-light px-7 py-3.5 rounded-md flex items-center gap-2"><i className="ri-calendar-check-line"></i>Book a Demo</Link>
+            <Link href="/contact" className="bg-primary-dark hover:bg-primary-hover text-background-light px-7 py-3.5 rounded-md flex items-center gap-2 transition-colors"><i className="ri-calendar-check-line"></i>Book a Demo</Link>
             <a href="" className="bg-background-light text-foreground-dark px-7 py-3.5 rounded-md flex items-center gap-2
             "><i className="ri-download-line"></i>Download FSMA PDF</a>
           </div>
