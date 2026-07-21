@@ -18,7 +18,11 @@ body {
   font-family: var(--font-body);
 }
 
-section:not(:first-of-type, :last-of-type) > div {
+section:not(:has(> img)) {
+  @apply py-16 md:py-20;
+}
+
+section:not(:has(> img)) > div {
   @apply max-w-6xl mx-auto px-10 text-center;
 }
 
@@ -33,10 +37,22 @@ p {
 
 @layer components {
   .tiny {
-    @apply text-xs uppercase tracking-widest inline-block mb-2;
+    @apply text-xs uppercase tracking-widest inline-block mb-2 text-primary-dark font-semibold;
   }
 
   .btn {
     @apply bg-primary-dark hover:bg-primary-hover text-background-light px-5 py-2.5 rounded-md text-sm font-semibold inline-flex items-center gap-2 transition-colors;
+  }
+
+  .btn-big {
+    @apply bg-primary-dark hover:bg-primary-hover text-background-light px-7 py-3.5 rounded-md font-semibold flex items-center gap-2 transition-colors;
+  }
+
+  .lbl {
+    @apply text-xs font-semibold text-foreground-light block;
+  }
+
+  .inpt {
+    @apply bg-background-light px-4 py-3 border border-[oklch(0.91_0.012_100)] rounded-md w-full text-sm text-foreground-dark focus:border-primary-light focus:outline-none;
   }
 }

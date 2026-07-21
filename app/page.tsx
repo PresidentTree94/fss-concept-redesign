@@ -46,15 +46,15 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-background-light my-6">Food Safety and Compliance<span className="text-primary-light inline-block">at Your Fingertips</span></h1>
           <p className="md:text-lg max-w-2xl mx-auto text-background-dark">Simpler audit prep, self-directed employee training, and automated document control — purpose-built for the food, dietary supplement, agriculture and seafood industries.</p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 font-semibold">
-            <Link href="/contact" className="bg-primary-dark hover:bg-primary-hover px-7 py-3.5 rounded-md text-background-light flex items-center gap-2 transition-colors"><i className="ri-shield-check-line"></i>Start Your Audit Prep</Link>
+            <Link href="/contact" className="btn-big"><i className="ri-shield-check-line"></i>Start Your Audit Prep</Link>
             <Link href="/services" className="bg-background-light/95 hover:bg-background-light px-7 py-3.5 rounded-md text-foreground-dark flex items-center gap-2">Explore Our Services<i className="ri-arrow-right-line"></i></Link>
           </div>
         </div>
       </section>
-      <section className="bg-background-light py-16 md:py-20">
+      <section className="bg-background-light">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 lg:!text-left">
           <div className="flex-1">
-            <span className="tiny font-semibold text-primary-dark">Who We Are</span>
+            <span className="tiny">Who We Are</span>
             <h2 className="text-3xl md:text-4xl text-foreground-dark max-w-lg mx-auto lg:mx-0">Compliance doesn't have to be chaos.</h2>
             <p className="text-foreground-light mt-4 mb-6 max-w-xl">Food SMART Strategies was built by real auditors who got tired of watching kitchens scramble before inspections. Our team brings decades of boots-on-the-ground regulatory experience, turning compliance from a panic event into a quiet daily habit.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-fit mx-auto sm:max-w-xl sm:mx-0">
@@ -71,9 +71,9 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="bg-secondary py-16 md:py-20">
+      <section className="bg-secondary">
         <div>
-          <span className="tiny font-semibold text-primary-dark">What We Do</span>
+          <span className="tiny">What We Do</span>
           <h2 className="text-3xl md:text-4xl text-foreground-dark max-w-2xl mx-auto">One platform for every compliance moment.</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10 mb-8 text-left">
             {services.map((s, index) => (
@@ -89,9 +89,9 @@ export default function Home() {
           <Link href="/services" className="btn">Explore all services<i className="ri-arrow-right-line"></i></Link>
         </div>
       </section>
-      <section className="bg-background-light py-16 md:py-20">
+      <section className="bg-background-light">
         <div>
-          <span className="tiny text-primary-dark font-semibold">Why We're Different</span>
+          <span className="tiny">Why We're Different</span>
           <h2 className="text-3xl md:text-4xl text-foreground-dark max-w-2xl mx-auto">SMART isn't just our name — it's how we work.</h2>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-3 max-w-fit mx-auto md:max-w-auto md:mx-0 my-10">
             {smart.map((s, index) => (
@@ -105,10 +105,10 @@ export default function Home() {
           <Link href="/about" className="border-2 border-primary-dark hover:bg-primary-dark hover:text-background-light text-primary-dark px-5 py-2.5 rounded-md text-sm font-semibold inline-flex items-center gap-2 transition-colors">See the full SMART methodology<i className="ri-arrow-right-line"></i></Link>
         </div>
       </section>
-      <section className="bg-background-dark py-16 md:py-20">
+      <section className="bg-background-dark">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 lg:!text-left">
           <div className="flex-1">
-            <span className="tiny text-primary-dark font-semibold">E-Learning</span>
+            <span className="tiny">E-Learning</span>
             <h2 className="text-3xl md:text-4xl text-foreground-dark max-w-lg mx-auto lg:mx-0">FSMA-compliant training, on your schedule.</h2>
             <p className="mt-4 mb-7 max-w-xl text-foreground-light mx-auto lg:mx-0">Four comprehensive modules built by real auditors. Earn certified badges with one-year expiration — proof your team is audit-ready, from any device.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -134,9 +134,9 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="bg-background-light py-16 md:py-20">
+      <section className="bg-background-light">
         <div>
-          <span className="tiny text-primary-dark font-semibold">Careers</span>
+          <span className="tiny">Careers</span>
           <h2 className="text-3xl md:text-4xl text-foreground-dark max-w-2xl mx-auto">Build your team at zero cost.</h2>
           <p className="mt-3 mb-10 text-foreground-light max-w-xl mx-auto">Our Incumbent Worker Apprenticeship turns your existing employees into certified food safety specialists — fully funded, zero downtime, nationally recognized credentials.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -160,7 +160,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl text-background-light">Ready to make your next inspection a non-event?</h2>
           <p className="text-background-dark/80 mt-2 mb-6">Book a 20-minute call with our audit team. No fluff — just a real plan for your facility.</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 font-semibold">
-            <Link href="/contact" className="bg-primary-dark hover:bg-primary-hover text-background-light px-7 py-3.5 rounded-md flex items-center gap-2 transition-colors"><i className="ri-calendar-check-line"></i>Book a Demo</Link>
+            <Link href="/contact" className="btn-big"><i className="ri-calendar-check-line"></i>Book a Demo</Link>
             <a href="" className="bg-background-light text-foreground-dark px-7 py-3.5 rounded-md flex items-center gap-2
             "><i className="ri-download-line"></i>Download FSMA PDF</a>
           </div>
