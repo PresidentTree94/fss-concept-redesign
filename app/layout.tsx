@@ -36,7 +36,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <footer className="bg-primary-dark p-10 lg:p-14">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-[auto_auto_auto_auto] justify-between gap-10">
             <div>
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 bg-background-light flex items-center justify-center rounded-md">
@@ -47,7 +47,7 @@ export default function RootLayout({
                   <p className="text-xs text-background-dark/80">The Food Safety Experts</p>
                 </div>
               </div>
-              <p className="text-sm text-background-dark/80 mt-4">30 years of experience helping food, dietary supplement, agriculture and seafood companies stay compliant, audit-ready, and always in operation.</p>
+              <p className="text-sm text-background-dark/80 mt-4 md:max-w-sm">30 years of experience helping food, dietary supplement, agriculture and seafood companies stay compliant, audit-ready, and always in operation.</p>
             </div>
             <div className="space-y-4">
               <h3 className="text-background-light">Stay Connected</h3>
@@ -76,6 +76,10 @@ export default function RootLayout({
                   <a href="mailto:info@foodsmartstrategies.com" className="hover:text-background-light transition-colors">info@foodsmartstrategies.com</a>
                 </li>
               </ul>
+            </div>
+            <div>
+              <h3 className="text-background-light">Disclaimer</h3>
+              <p className="text-sm text-background-dark/80 mt-4 md:max-w-sm">This is an independent redesign concept created for portfolio purposes. I am not affiliated with Food SMART Strategies. Website photographs belong to the AI-generated.</p>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 mt-10 pt-6 text-xs text-background-dark/80 border-t border-primary-light/40">

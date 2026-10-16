@@ -4,9 +4,9 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const navs = [
-  { text: "About", link: "/about" },
-  { text: "Services", link: "/services" },
-  { text: "E-Learning", link: "/e-learning" },
+  { text: "About", link: "" },
+  { text: "Services", link: "" },
+  { text: "E-Learning", link: "" },
   { text: "Careers", link: "/careers" }
 ];
 
@@ -32,7 +32,7 @@ export default function Navbar() {
     <header className={`fixed top-0 inset-x-0 z-1 ${isActive ? "bg-background-light/95 backdrop-blur border-b border-border" : "bg-transparent"} transition-colors duration-300`}>
       <div className="flex flex-col lg:flex-row lg:items-center justify-between lg:px-6">
         <div className="min-h-16 flex items-center justify-between px-6 lg:px-0">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
             <div className="w-11 h-11 bg-primary-dark rounded-md flex items-center justify-center">
               <i className="ri-leaf-line text-background-light text-xl"></i>
             </div>
@@ -45,7 +45,7 @@ export default function Navbar() {
         </div>
         <nav className={`${open ? "flex" : "hidden lg:flex"} flex-col lg:flex-row gap-1 text-sm font-medium pt-4 pb-3 lg:py-0 border-t lg:border-t-0 border-border px-6 lg:px-0`}>
           {navs.map((n, index) => (
-            <Link key={index} href={n.link} className={`${isActive ? "text-foreground-light" : "text-background-light/90"} px-3 py-2 rounded-md hover:text-background-light hover:bg-background-light/10 transition-colors duration-300`}>{n.text}</Link>
+            <Link key={index} href={n.link} className={`${isActive ? "text-foreground-light" : "text-background-light/90"} ${!n.link && "line-through"} px-3 py-2 rounded-md hover:text-background-light hover:bg-background-light/10 transition-colors duration-300`} onClick={() => setOpen(false)}>{n.text}</Link>
           ))}
         </nav>
         <Link href="/contact" className={`${open ? "block" : "hidden lg:block"} text-sm font-semibold bg-primary-dark hover:bg-primary-hover px-5 py-2.5 rounded-md text-background-light mb-4 lg:mb-0 mx-6 lg:mx-0 transition-colors duration-300`}>Book a Demo</Link>

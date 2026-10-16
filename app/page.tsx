@@ -43,11 +43,11 @@ export default function Home() {
             <span className="w-2 h-2 rounded-full bg-primary-dark"></span>
             <span className="text-xs font-semibold uppercase tracking-widest">Trusted since 1994</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-background-light my-6">Food Safety and Compliance<span className="text-primary-light inline-block">at Your Fingertips</span></h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-background-light my-6">Food Safety and Compliance <span className="text-primary-light block">at Your Fingertips</span></h1>
           <p className="md:text-lg max-w-2xl mx-auto text-background-dark">Simpler audit prep, self-directed employee training, and automated document control — purpose-built for the food, dietary supplement, agriculture and seafood industries.</p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 font-semibold">
             <Link href="/contact" className="btn-big"><i className="ri-shield-check-line"></i>Start Your Audit Prep</Link>
-            <Link href="/services" className="bg-background-light/95 hover:bg-background-light px-7 py-3.5 rounded-md text-foreground-dark flex items-center gap-2">Explore Our Services<i className="ri-arrow-right-line"></i></Link>
+            <Link href="#" className="bg-background-light/95 hover:bg-background-light px-7 py-3.5 rounded-md text-foreground-dark flex items-center gap-2">Explore Our Services<i className="ri-arrow-right-line"></i></Link>
           </div>
         </div>
       </section>
@@ -62,7 +62,7 @@ export default function Home() {
                 <span key={index} className="flex items-center gap-1.5 text-sm text-foreground-light"><i className="ri-checkbox-circle-line text-primary-dark"></i>{a}</span>
               ))}
             </div>
-            <Link href="/about" className="btn mt-7">Learn more about us<i className="ri-arrow-right-line"></i></Link>
+            <Link href="#" className="btn mt-7">Learn more about us<i className="ri-arrow-right-line"></i></Link>
           </div>
           <Images
             root="about"
@@ -86,7 +86,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <Link href="/services" className="btn">Explore all services<i className="ri-arrow-right-line"></i></Link>
+          <Link href="#" className="btn">Explore all services<i className="ri-arrow-right-line"></i></Link>
         </div>
       </section>
       <section className="bg-background-light">
@@ -102,7 +102,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <Link href="/about" className="border-2 border-primary-dark hover:bg-primary-dark hover:text-background-light text-primary-dark px-5 py-2.5 rounded-md text-sm font-semibold inline-flex items-center gap-2 transition-colors">See the full SMART methodology<i className="ri-arrow-right-line"></i></Link>
+          <Link href="#" className="border-2 border-primary-dark hover:bg-primary-dark hover:text-background-light text-primary-dark px-5 py-2.5 rounded-md text-sm font-semibold inline-flex items-center gap-2 transition-colors">See the full SMART methodology<i className="ri-arrow-right-line"></i></Link>
         </div>
       </section>
       <section className="bg-background-dark">
@@ -123,7 +123,7 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-7 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
-              <Link href="/e-learning" className="btn">Explore E-Learning<i className="ri-arrow-right-line"></i></Link>
+              <Link href="#" className="btn">Explore E-Learning<i className="ri-arrow-right-line"></i></Link>
               <span className="text-sm text-foreground-light">Starting at $25 per module</span>
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function Home() {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
-            <Link href="/careers" className="btn">View Careers<i className="ri-arrow-right-line"></i></Link>
+            <Link href="#" className="btn">View Careers<i className="ri-arrow-right-line"></i></Link>
             <p className="text-sm text-foreground-light">Apprenticeships, on-site training & open roles</p>
           </div>
         </div>
