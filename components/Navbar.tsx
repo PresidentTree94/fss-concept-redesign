@@ -45,7 +45,7 @@ export default function Navbar() {
         </div>
         <nav className={`${open ? "flex" : "hidden lg:flex"} flex-col lg:flex-row gap-1 text-sm font-medium pt-4 pb-3 lg:py-0 border-t lg:border-t-0 border-border px-6 lg:px-0`}>
           {navs.map((n, index) => (
-            <Link key={index} href={n.link} className={`${isActive ? "text-foreground-light" : "text-background-light/90"} ${!n.link && "line-through"} px-3 py-2 rounded-md hover:text-background-light hover:bg-background-light/10 transition-colors duration-300`} onClick={() => setOpen(false)}>{n.text}</Link>
+            <Link key={index} href={n.link ? n.link : "#"} className={`${isActive ? "text-foreground-light" : "text-background-light/90"} ${!n.link && "line-through"} px-3 py-2 rounded-md hover:text-background-light hover:bg-background-light/10 transition-colors duration-300`} onClick={() => setOpen(false)}>{n.text}</Link>
           ))}
         </nav>
         <Link href="/contact" className={`${open ? "block" : "hidden lg:block"} text-sm font-semibold bg-primary-dark hover:bg-primary-hover px-5 py-2.5 rounded-md text-background-light mb-4 lg:mb-0 mx-6 lg:mx-0 transition-colors duration-300`}>Book a Demo</Link>
